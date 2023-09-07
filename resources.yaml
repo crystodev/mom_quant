@@ -132,7 +132,7 @@
                 sprout_seed: 1
                 soil: 1
             output:
-                food: [10, 14, 12]
+                sprouts: [10, 14, 12]
                 sprout_seed: [0, 1, 0.1]
                 soil: [0, 1, 0.2]
         plant_lettuce:
@@ -145,7 +145,7 @@
                 lettuce_seed: 1
                 soil: 2
             output:
-                food: [20, 50, 35]
+                lettuce: [2, 3, 2.5]
                 lettuce_seed: [0, 1, 0.1]
                 soil: [0, 1, 0.2]
         plant_carrots:
@@ -158,7 +158,7 @@
                 carrot_seed: 1
                 soil: 4
             output:
-                food: [50, 70, 60]
+                carrots: [4, 7, 5.5]
                 carrot_seed: [0, 1, 0.1]
                 soil: [0, 1, 0.2]
         plant_sweet_potato:
@@ -171,7 +171,7 @@
                 sweet_potato_seed: 1
                 soil: 5
             output:
-                food: [90, 150, 120]
+                sweet_potatoes: [3, 8, 4.2]
                 sweet_potato_seed: [0, 1, 0.1]
                 soil: [0, 1, 0.2]
         plant_soy:
@@ -186,7 +186,7 @@
                 soy_seed: 1
                 soil: 7
             output:
-                food: [140, 230, 185]
+                soybean: [5, 10, 7.5]
                 soy_seed: [0, 1, 0.1]
                 soil: [0, 1, 0.2]
         plant_coffee:
@@ -276,6 +276,90 @@
             output:
                 lootlist:
                     - lifescience_tools_a: [1, 1, 1]
+        make_microgreen_broths:
+            display_name: Make Microgreen Broths
+            building: greenhouse
+            input:
+                stamina: 1
+                power: 2
+                sprouts: 15
+                halite: 2
+                water: 5
+            output:
+                sprout_soup: [1, 1, 1]
+        make_lettuce_salad:
+            display_name: Make Lettuce Salad
+            building: greenhouse
+            input:
+                stamina: 1
+                power: 1
+                lettuce: 1
+                water: 2
+            output:
+                lettuce_salad: [1, 1, 1]
+        make_roasted_carrots:
+            display_name: Make Martian Pioneer's Roasted Carrots
+            building: greenhouse
+            input:
+                power: 10
+                carrots: 2
+                halite: 2
+            output:
+                roasted_carrots: [1, 1, 1]
+        make_sweet_potato_wedges:
+            display_name: Make Sweet Potato Wedges
+            building: greenhouse
+            input:
+                power: 20
+                sweet_potatoes: 3
+                halite: 3
+            output:
+                roasted_potatoes: [1, 1, 1]
+        make_protein_paste:
+            display_name: Make Protein Paste
+            building: greenhouse
+            input:
+                stamina: 2
+                soybean: 4
+                water: 6
+            output:
+                soybean: [1, 3, 0.2]
+                soybean_paste: [1, 1, 1]
+        blend_sprouts:
+            display_name: Blend Sprouts into Food
+            building: greenhouse
+            input:
+                sprouts: 14
+            output:
+                food: [10, 14, 12]
+        blend_lettuce:
+            display_name: Blend Lettuce into Food
+            building: greenhouse
+            input:
+                lettuce: 3
+            output:
+                food: [20, 50, 35]
+        blend_carrots:
+            display_name: Blend Carrots into Food
+            building: greenhouse
+            input:
+                carrots: 7
+            output:
+                food: [50, 70, 60]
+        blend_sweet_potato:
+            display_name: Blend Sweet Potato into Food
+            building: greenhouse
+            input:
+                sweet_potatoes: 5
+            output:
+                food: [90, 150, 120]
+        blend_soy:
+            display_name: Blend Soy into Food
+            building: greenhouse
+            input:
+                soybean: 10
+            output:
+                food: [140, 230, 185]
         sow_bamboo_C1:
             display_name: Sow Bamboo Seeds
             building: greenhouse
@@ -437,21 +521,6 @@
             output:
                 sweet_potato_seed: [40, 80, 55]
         #cad
-        capture_ammonia_C1:
-            display_name: Capture Ammonia
-            building: sab_reactor
-            level:
-                chemistry: 5
-            input:
-                stamina: 1
-                nitrogen: 5
-                hydrogen: 15
-                smelt_iron: 15
-                chemistry_tools: 2
-                power: 100
-            output:
-                lootlist:
-                    - ammonia: [1, 2, 5]
         capture_ar_III_C1:
             display_name: Capture Argon III
             building: cad
@@ -2205,6 +2274,297 @@
             output:
                 lootlist:
                     - smelter-gen3_U1: [1, 1, 1]
+        craft_waterfilter3_c_C1:
+            display_name: Craft Common Water Filter (Gen 3)
+            building: machine_shop
+            level:
+                machining: 10
+            input:
+                power: 60
+                stamina: 5
+                smelt_steel: 20
+                glass: 3
+                circuit_component: 1
+                minting_token: 1
+                machining_tools: 5
+            output:
+                lootlist:
+                    - water_filter-gen3_C1: [1, 1, 1]
+        craft_waterfilter3_e_C1:
+            display_name: Craft Epic Water Filter (Gen 3)
+            building: machine_shop
+            level:
+                machining: 75
+            input:
+                power: 60
+                stamina: 5
+                aluminum_plate: 15
+                glass_panel: 1
+                circuit_component: 5
+                minting_token: 4
+                machining_tools: 5
+                master_signet_machining: 1
+            output:
+                lootlist:
+                    - water_filter-gen3_E1: [1, 1, 1]
+        craft_waterfilter3_l_C1:
+            display_name: Craft Legendary Water Filter (Gen 3)
+            building: machine_shop
+            level:
+                machining: 100
+            input:
+                power: 60
+                stamina: 5
+                aluminum_plate: 15
+                glass_panel: 2
+                circuit_component: 4
+                minting_token: 5
+                electronics_parts: 3
+                machining_tools: 5
+                master_signet_machining: 2
+            output:
+                lootlist:
+                    - water_filter-gen3_L1: [1, 1, 1]
+        craft_waterfilter3_m_C1:
+            display_name: Craft Mythic Water Filter (Gen 3)
+            building: machine_shop
+            level:
+                machining: 125
+            input:
+                power: 60
+                stamina: 5
+                aluminum_plate: 25
+                glass_panel: 4
+                circuit_component: 5
+                minting_token: 5
+                electronics_parts: 4
+                machining_tools: 5
+                master_signet_machining: 3
+            output:
+                lootlist:
+                    - water_filter-gen3_M1: [1, 1, 1]
+        craft_waterfilter3_pack_large_C1:
+            display_name: Obsidian Water Filter Pack (Gen 3)
+            building: machine_shop
+            level:
+                machining: 135
+            input:
+                power: 60
+                stamina: 5
+                aluminum_plate: 30
+                glass_panel: 5
+                circuit_component: 8
+                minting_token: 5
+                electronics_parts: 5
+                machining_tools: 5
+                master_signet_machining: 3
+            output:
+                lootlist:
+                    - waterfilter-gen3_pack_large: [1, 1, 1]
+        craft_waterfilter3_pack_small_C1:
+            display_name: Gold Water Filter Pack (Gen 3)
+            building: machine_shop
+            level:
+                machining: 120
+            input:
+                power: 60
+                stamina: 5
+                aluminum_plate: 20
+                glass_panel: 3
+                circuit_component: 5
+                minting_token: 3
+                electronics_parts: 2
+                machining_tools: 5
+                master_signet_machining: 2
+            output:
+                lootlist:
+                    - waterfilter-gen3_pack_small: [1, 1, 1]
+        craft_waterfilter3_r_C1:
+            display_name: Craft Rare Water Filter (Gen 3)
+            building: machine_shop
+            level:
+                machining: 50
+            input:
+                power: 60
+                stamina: 5
+                smelt_steel: 40
+                glass: 6
+                circuit_component: 3
+                minting_token: 3
+                machining_tools: 5
+            output:
+                lootlist:
+                    - water_filter-gen3_R1: [1, 1, 1]
+        craft_waterfilter3_uc_C1:
+            display_name: Craft Uncommon Water Filter (Gen 3)
+            building: machine_shop
+            level:
+                machining: 25
+            input:
+                power: 60
+                stamina: 5
+                smelt_steel: 30
+                glass: 3
+                circuit_component: 2
+                minting_token: 2
+                machining_tools: 5
+            output:
+                lootlist:
+                    - water_filter-gen3_U1: [1, 1, 1]
+        #tool workshop
+        make_scavenging_tools_novice_C1:
+            display_name: Make Novice Scavenging Tools
+            building: tool_workshop
+            level:
+                machining: 5
+            input:
+                power: 40
+                stamina: 5
+                dusk: 10
+                metis: 2
+                smelt_iron: 5
+                pvc_raw: 4
+                bamboo: 20
+                machining_tools: 2
+            output:
+                lootlist:
+                    - scavenging_tools_n: [1, 1, 1]
+        make_chemistry_tools_novice_C1:
+            display_name: Make Novice Chemistry Tools
+            building: tool_workshop
+            level:
+                machining: 20
+            input:
+                power: 40
+                stamina: 5
+                dusk: 10
+                metis: 2
+                pla: 4
+                pvc_raw: 2
+                argon: 10
+                machining_tools: 2
+            output:
+                lootlist:
+                    - chemistry_tools_n: [1, 1, 1]
+        make_cooking_tools_novice_C1:
+            display_name: Make Novice Cooking Tools
+            building: tool_workshop
+            level:
+                machining: 20
+            input:
+                power: 40
+                stamina: 5
+                dusk: 10
+                metis: 2
+                smelt_iron: 4
+                aluminum_plate: 3
+                machining_tools: 2
+            output:
+                lootlist:
+                    - chemistry_tools_n: [1, 1, 1]
+        make_electrical_tools_novice_C1:
+            display_name: Make Novice Electrical Tools
+            building: tool_workshop
+            level:
+                machining: 15
+            input:
+                power: 40
+                stamina: 5
+                dusk: 10
+                metis: 2
+                pvc_raw: 4
+                empty_pc: 4
+                rover_wires: 15
+                machining_tools: 2
+            output:
+                lootlist:
+                    - electrical_tools_n: [1, 1, 1]
+        make_fabrication_tools_novice_C1:
+            display_name: Make Novice Fabrication Tools
+            building: tool_workshop
+            level:
+                machining: 20
+            input:
+                power: 40
+                stamina: 5
+                dusk: 10
+                metis: 2
+                pvc_pipe: 6
+                bamboo: 25
+                pla: 7
+                machining_tools: 2
+            output:
+                lootlist:
+                    - fabrication_tools_n: [1, 1, 1]
+        make_lifescience_tools_novice_C1:
+            display_name: Make Novice Life Science Tools
+            building: tool_workshop
+            level:
+                machining: 10
+            input:
+                power: 40
+                stamina: 5
+                dusk: 10
+                metis: 2
+                smelt_iron: 4
+                pvc_raw: 4
+                water: 20
+                soil: 10
+                regolith: 50
+                machining_tools: 2
+            output:
+                lootlist:
+                    - lifescience_tools_n: [1, 1, 1]
+        make_machining_tools_novice_C1:
+            display_name: Make Novice Machining Tools
+            building: tool_workshop
+            input:
+                power: 40
+                stamina: 5
+                dusk: 10
+                metis: 2
+                smelt_iron: 7
+                metal_bits: 50
+                electronic_bits: 50
+                machining_tools: 2
+            output:
+                lootlist:
+                    - machining_tools_n: [1, 1, 1]
+        make_mining_tools_novice_C1:
+            display_name: Make Novice Mining Tools
+            building: tool_workshop
+            level:
+                machining: 20
+            input:
+                power: 40
+                stamina: 5
+                dusk: 10
+                metis: 2
+                smelt_iron: 5
+                smelt_aluminum: 1
+                metal_bits: 75
+                machining_tools: 2
+            output:
+                lootlist:
+                    - mining_tools_n: [1, 1, 1]
+        make_robotics_tools_novice_C1:
+            display_name: Make Novice Robotics Tools
+            building: tool_workshop
+            level:
+                machining: 25
+            input:
+                power: 40
+                stamina: 5
+                dusk: 10
+                metis: 2
+                electronic_bits: 50
+                metal_bits: 50
+                rover_wires: 50
+                machining_tools: 2
+            output:
+                lootlist:
+                    - robotics_tools_n: [1, 1, 1]
+        #3d print shop
         craft_machine_shop3_c_C1:
             display_name: Craft Common Machine Shop (Gen 3)
             building: 3d_print_shop
@@ -2372,163 +2732,6 @@
             output:
                 lootlist:
                     - solarpanel-gen3_pack_small: [1, 1, 1]
-        craft_vulcan_C1:
-            display_name: Craft Vulcan Metalworks
-            building: engineering_bay
-            level:
-                fabrication: 55
-            input:
-                recipe_vulcan_metalworks: 1
-                stamina: 5
-                machine_shop-gen3_C1: 3
-                smelter-gen3_C1: 3
-                glitter: 500
-            output:
-                lootset:
-                    - vulcan-metalworks_C1: [0.465, 1, 1]
-                    - vulcan-metalworks_U1: [0.3, 1, 1]
-                    - vulcan-metalworks_R1: [0.15, 1, 1]
-                    - vulcan-metalworks_E1: [0.06, 1, 1]
-                    - vulcan-metalworks_L1: [0.02, 1, 1]
-                    - vulcan-metalworks_M1: [0.005, 1, 1]
-        craft_waterfilter3_c_C1:
-            display_name: Craft Common Water Filter (Gen 3)
-            building: machine_shop
-            level:
-                machining: 10
-            input:
-                power: 60
-                stamina: 5
-                smelt_steel: 20
-                glass: 3
-                circuit_component: 1
-                minting_token: 1
-                machining_tools: 5
-            output:
-                lootlist:
-                    - water_filter-gen3_C1: [1, 1, 1]
-        craft_waterfilter3_e_C1:
-            display_name: Craft Epic Water Filter (Gen 3)
-            building: machine_shop
-            level:
-                machining: 75
-            input:
-                power: 60
-                stamina: 5
-                aluminum_plate: 15
-                glass_panel: 1
-                circuit_component: 5
-                minting_token: 4
-                machining_tools: 5
-                master_signet_machining: 1
-            output:
-                lootlist:
-                    - water_filter-gen3_E1: [1, 1, 1]
-        craft_waterfilter3_l_C1:
-            display_name: Craft Legendary Water Filter (Gen 3)
-            building: machine_shop
-            level:
-                machining: 100
-            input:
-                power: 60
-                stamina: 5
-                aluminum_plate: 15
-                glass_panel: 2
-                circuit_component: 4
-                minting_token: 5
-                electronics_parts: 3
-                machining_tools: 5
-                master_signet_machining: 2
-            output:
-                lootlist:
-                    - water_filter-gen3_L1: [1, 1, 1]
-        craft_waterfilter3_m_C1:
-            display_name: Craft Mythic Water Filter (Gen 3)
-            building: machine_shop
-            level:
-                machining: 125
-            input:
-                power: 60
-                stamina: 5
-                aluminum_plate: 25
-                glass_panel: 4
-                circuit_component: 5
-                minting_token: 5
-                electronics_parts: 4
-                machining_tools: 5
-                master_signet_machining: 3
-            output:
-                lootlist:
-                    - water_filter-gen3_M1: [1, 1, 1]
-        craft_waterfilter3_pack_large_C1:
-            display_name: Obsidian Water Filter Pack (Gen 3)
-            building: machine_shop
-            level:
-                machining: 135
-            input:
-                power: 60
-                stamina: 5
-                aluminum_plate: 30
-                glass_panel: 5
-                circuit_component: 8
-                minting_token: 5
-                electronics_parts: 5
-                machining_tools: 5
-                master_signet_machining: 3
-            output:
-                lootlist:
-                    - waterfilter-gen3_pack_large: [1, 1, 1]
-        craft_waterfilter3_pack_small_C1:
-            display_name: Gold Water Filter Pack (Gen 3)
-            building: machine_shop
-            level:
-                machining: 120
-            input:
-                power: 60
-                stamina: 5
-                aluminum_plate: 20
-                glass_panel: 3
-                circuit_component: 5
-                minting_token: 3
-                electronics_parts: 2
-                machining_tools: 5
-                master_signet_machining: 2
-            output:
-                lootlist:
-                    - waterfilter-gen3_pack_small: [1, 1, 1]
-        craft_waterfilter3_r_C1:
-            display_name: Craft Rare Water Filter (Gen 3)
-            building: machine_shop
-            level:
-                machining: 50
-            input:
-                power: 60
-                stamina: 5
-                smelt_steel: 40
-                glass: 6
-                circuit_component: 3
-                minting_token: 3
-                machining_tools: 5
-            output:
-                lootlist:
-                    - water_filter-gen3_R1: [1, 1, 1]
-        craft_waterfilter3_uc_C1:
-            display_name: Craft Uncommon Water Filter (Gen 3)
-            building: machine_shop
-            level:
-                machining: 25
-            input:
-                power: 60
-                stamina: 5
-                smelt_steel: 30
-                glass: 3
-                circuit_component: 2
-                minting_token: 2
-                machining_tools: 5
-            output:
-                lootlist:
-                    - water_filter-gen3_U1: [1, 1, 1]
-        #3d print shop
         make_electronic_bits:
             display_name: Make Electronic Bits
             building: 3d_print_shop
@@ -2601,132 +2804,6 @@
                 stamina: 1
             output:
                 pvc_pipe: [2, 15, 4.111]
-        make_scavenging_tools_novice_C1:
-            display_name: Make Novice Scavenging Tools
-            building: 3d_print_shop
-            level:
-                fabrication: 5
-            input:
-                smelt_iron: 20
-                bamboo: 20
-                pvc_raw: 3
-                metis: 2
-                power: 40
-                stamina: 5
-            output:
-                lootlist:
-                    - scavenging_tools_n: [1, 1, 1]
-        make_chemistry_tools_novice_C1:
-            display_name: Make Novice Chemistry Tools
-            building: 3d_print_shop
-            level:
-                fabrication: 20
-            input:
-                argon: 6
-                oxygen: 40
-                pla: 4
-                metis: 2
-                dusk: 10
-                power: 40
-                stamina: 5
-            output:
-                lootlist:
-                    - chemistry_tools_n: [1, 1, 1]
-        make_electrical_tools_novice_C1:
-            display_name: Make Novice Electrical Tools
-            building: 3d_print_shop
-            level:
-                fabrication: 15
-            input:
-                empty_pc: 5
-                rover_wires: 15
-                pvc_raw: 4
-                metis: 3
-                dusk: 10
-                power: 40
-                stamina: 5
-                fabrication_tools: 1
-            output:
-                lootlist:
-                    - electrical_tools_n: [1, 1, 1]
-        make_fabrication_tools_novice_C1:
-            display_name: Make Novice Fabrication Tools
-            building: 3d_print_shop
-            input:
-                pvc_pipe: 6
-                bamboo: 25
-                paper: 5
-                metis: 2
-                dusk: 10
-                power: 40
-                stamina: 5
-            output:
-                lootlist:
-                    - fabrication_tools_n: [1, 1, 1]
-        make_lifescience_tools_novice_C1:
-            display_name: Make Novice Life Science Tools
-            building: 3d_print_shop
-            level:
-                fabrication: 15
-            input:
-                soil: 60
-                water: 60
-                regolith: 400
-                metis: 2
-                power: 40
-                dusk: 10
-                stamina: 5
-            output:
-                lootlist:
-                    - lifescience_tools_n: [1, 1, 1]
-        make_machining_tools_novice_C1:
-            display_name: Make Novice Machining Tools
-            building: 3d_print_shop
-            level:
-                fabrication: 20
-            input:
-                smelt_steel: 10
-                metal_bits: 100
-                electronic_bits: 100
-                metis: 2
-                dusk: 10
-                power: 40
-                stamina: 5
-            output:
-                lootlist:
-                    - machining_tools_n: [1, 1, 1]
-        make_mining_tools_novice_C1:
-            display_name: Make Novice Mining Tools
-            building: 3d_print_shop
-            level:
-                fabrication: 20
-            input:
-                metal_bits: 150
-                smelt_iron: 10
-                regolith: 200
-                metis: 2
-                dusk: 10
-                power: 40
-                stamina: 5
-            output:
-                lootlist:
-                    - mining_tools_n: [1, 1, 1]
-        make_robotics_tools_novice_C1:
-            display_name: Make Novice Robotics Tools
-            building: 3d_print_shop
-            level:
-                fabrication: 25
-            input:
-                electronic_bits: 150
-                metal_bits: 75
-                rover_wires: 15
-                metis: 2
-                dusk: 10
-                power: 40
-                stamina: 5
-            output:
-                lootlist:
-                    - robotics_tools_n: [1, 1, 1]
         make_bamboo_furniture:
             display_name: Make Bamboo Furniture
             building: 3d_print_shop
@@ -2999,6 +3076,21 @@
             output:
                 fermented_sorghum: [20, 30, 25]
         #Sabatier Reactor
+        capture_ammonia_C1:
+            display_name: Capture Ammonia
+            building: sab_reactor
+            level:
+                chemistry: 5
+            input:
+                stamina: 1
+                nitrogen: 5
+                hydrogen: 15
+                smelt_iron: 15
+                chemistry_tools: 2
+                power: 100
+            output:
+                lootlist:
+                    - ammonia: [1, 2, 5]
         produce_methane:
             display_name: Produce Methane
             building: sab_reactor
@@ -5108,6 +5200,25 @@
                 research_robotics_e: [0, 1, 0.01]
                 research_robotics_m: [0, 1, 0.0025]
         #engineering bay
+        craft_vulcan_C1:
+            display_name: Craft Vulcan Metalworks
+            building: engineering_bay
+            level:
+                fabrication: 55
+            input:
+                recipe_vulcan_metalworks: 1
+                stamina: 5
+                machine_shop-gen3_C1: 3
+                smelter-gen3_C1: 3
+                glitter: 500
+            output:
+                lootset:
+                    - vulcan-metalworks_C1: [0.465, 1, 1]
+                    - vulcan-metalworks_U1: [0.3, 1, 1]
+                    - vulcan-metalworks_R1: [0.15, 1, 1]
+                    - vulcan-metalworks_E1: [0.06, 1, 1]
+                    - vulcan-metalworks_L1: [0.02, 1, 1]
+                    - vulcan-metalworks_M1: [0.005, 1, 1]
         airlock:
             display_name: Create Airlock
             building: engineering_bay
@@ -8380,3 +8491,5 @@
             display_name: Commissary Kitchen
         daily_grinder:
             display_name: Daily Actions
+        tool_workshop:
+            display_name: Tool Workshop
