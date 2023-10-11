@@ -2,11 +2,10 @@
  
 This tool calculates the Dusk gain of various Million on Mars tasks. This is EXPERIMENTAL, do your own calculations before making major decisions!
 
+Forked from Digipedro (https://github.com/digipedro/mom_quant)
 ## Live Webpage
 
-https://digipedro.github.io/mom_quant/
-
-Alternate link for if/when the github hosting isn't working: https://digipedro-mom-quant.netlify.app/
+https://crystodev.github.io/mom_quant/
 
 ## What's All This Then?
 
@@ -16,6 +15,6 @@ Learn more about Banano : https://banano.cc/
 
 ## Donations
 
-Love it? My Banano address is ban_3d6pzryts53tzk1u87yobfcrcwuiq11hhpj7oo8mapnodpkroc7dkqq8z8hc
+Love it? Digipedro's Banano address is ban_3d6pzryts53tzk1u87yobfcrcwuiq11hhpj7oo8mapnodpkroc7dkqq8z8hc
 
-My WAX is "iamdigipedro"
+His WAX is "iamdigipedro"

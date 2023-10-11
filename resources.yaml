@@ -1400,23 +1400,6 @@
             output:
                 lootlist:
                     - chemistry_tools_m: [1, 1, 1]
-        make_electrical_tools_apprentice_C1:
-            display_name: Make Apprentice Electrical Tools
-            building: machine_shop
-            level:
-                electrical: 35
-                fabrication: 25
-            input:
-                electrical_tools_n: 1
-                metis: 3
-                empty_pc: 2
-                rover_wires: 6
-                electronic_bits: 50
-                power: 60
-                stamina: 5
-            output:
-                lootlist:
-                    - electrical_tools_a: [1, 1, 1]
         make_electrical_tools_artisan_C1:
             display_name: Make Artisan Electrical Tools
             building: machine_shop
@@ -2094,23 +2077,6 @@
                 aluminum_plate: [8, 10, 9]
                 electronics_parts: 8
                 glass: 6
-        make_machining_tools_apprentice_C1:
-            display_name: Make Apprentice Machining Tools
-            building: machine_shop
-            level:
-                machining: 40
-                fabrication: 25
-            input:
-                machining_tools_n: 1
-                metis: 2
-                metal_bits: 20
-                electronic_bits: 50
-                smelt_steel: 4
-                power: 60
-                stamina: 5
-            output:
-                lootlist:
-                    - machining_tools_a: [1, 1, 1]
         create_seed_sowing_kit:
             display_name: Create Seed Sowing Kit
             building: machine_shop
@@ -2395,23 +2361,6 @@
                 lootlist:
                     - water_filter-gen3_U1: [1, 1, 1]
         #tool workshop
-        make_scavenging_tools_novice_C1:
-            display_name: Make Novice Scavenging Tools
-            building: tool_workshop
-            level:
-                machining: 5
-            input:
-                power: 40
-                stamina: 5
-                dusk: 10
-                metis: 2
-                smelt_iron: 5
-                pvc_raw: 4
-                bamboo: 20
-                machining_tools: 2
-            output:
-                lootlist:
-                    - scavenging_tools_n: [1, 1, 1]
         make_chemistry_tools_novice_C1:
             display_name: Make Novice Chemistry Tools
             building: tool_workshop
@@ -2547,6 +2496,40 @@
             output:
                 lootlist:
                     - robotics_tools_n: [1, 1, 1]
+        make_scavenging_tools_novice_C1:
+            display_name: Make Novice Scavenging Tools
+            building: tool_workshop
+            level:
+                machining: 5
+            input:
+                power: 40
+                stamina: 5
+                dusk: 10
+                metis: 2
+                smelt_iron: 5
+                pvc_raw: 4
+                bamboo: 20
+                machining_tools: 2
+            output:
+                lootlist:
+                    - scavenging_tools_n: [1, 1, 1]
+        make_electrical_tools_apprentice_C1:
+            display_name: Make Apprentice Electrical Tools
+            building: tool_workshop
+            level:
+                machining: 40
+            input:
+                electrical_tools_n: 1
+                machining_tools: 2
+                metis: 2
+                empty_pc: 1
+                rover_wires: 3
+                electronic_bits: 5
+                power: 60
+                stamina: 5
+            output:
+                lootlist:
+                    - electrical_tools_a: [1, 1, 1]
         make_lifescience_tools_apprentice_C1:
             display_name: Make Apprentice Life Science Tools
             building: tool_workshop
@@ -2554,6 +2537,7 @@
                 machining: 35
             input:
                 lifescience_tools_n: 1
+                machining_tools: 2
                 metis: 2
                 water: 5
                 soil: 5
@@ -2563,6 +2547,39 @@
             output:
                 lootlist:
                     - lifescience_tools_a: [1, 1, 1]
+        make_machining_tools_apprentice_C1:
+            display_name: Make Apprentice Machining Tools
+            building: tool_workshop
+            level:
+                machining: 25
+            input:
+                machining_tools_n: 1
+                machining_tools: 2
+                metis: 2
+                metal_bits: 5
+                electronic_bits: 5
+                smelt_iron: 1
+                power: 60
+                stamina: 5
+            output:
+                lootlist:
+                    - machining_tools_a: [1, 1, 1]
+        make_scavenging_tools_apprentice_C1:
+            display_name: Make Apprentice Scavenging Tools
+            building: tool_workshop
+            level:
+                machining: 30
+            input:
+                scavenging_tools_n: 1
+                machining_tools: 2
+                metis: 2
+                electronic_bits: 5
+                smelt_iron: 1
+                power: 60
+                stamina: 5
+            output:
+                lootlist:
+                    - scavenging_tools_Apprentice: [1, 1, 1]
         #3d print shop
         craft_machine_shop3_c_C1:
             display_name: Craft Common Machine Shop (Gen 3)
@@ -6211,22 +6228,6 @@
             output:
                 dusk: 1
         # cantina
-        make_scavenging_tools_apprentice_C1:
-            display_name: Make Apprentice Scavenging Tools
-            building: cantina
-            level:
-                scavenging: 30
-                fabrication: 25
-            input:
-                scavenging_tools_n: 1
-                metis: 2
-                electronic_bits: 50
-                smelt_aluminum: 1
-                stamina: 5
-                cantina_coin: 2
-            output:
-                lootlist:
-                    - scavenging_tools_Apprentice: [1, 1, 1]
         # added by millorfernades (@fuseki#1488)
         # cantina Sunday tasks
         faded_collection:
