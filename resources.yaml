@@ -259,23 +259,6 @@
                     - sunflowers: [1, 1, 2]
                     - sunflower_seeds: [0.1, 1, 3]
                     - soil: [0.2, 1, 1]
-        make_lifescience_tools_apprentice_C1:
-            display_name: Make Apprentice Life Science Tools
-            building: greenhouse
-            level:
-                life science: 30
-                fabrication: 25
-            input:
-                lifescience_tools_n: 1
-                metis: 2
-                water: 20
-                soil: 20
-                regolith: 100
-                power: 60
-                stamina: 5
-            output:
-                lootlist:
-                    - lifescience_tools_a: [1, 1, 1]
         make_microgreen_broths:
             display_name: Make Microgreen Broths
             building: greenhouse
@@ -314,7 +297,7 @@
                 sweet_potatoes: 3
                 halite: 3
             output:
-                roasted_potatoes: [1, 1, 1]
+                roasted_sweet_potatoes: [1, 1, 1]
         make_protein_paste:
             display_name: Make Protein Paste
             building: greenhouse
@@ -2564,6 +2547,22 @@
             output:
                 lootlist:
                     - robotics_tools_n: [1, 1, 1]
+        make_lifescience_tools_apprentice_C1:
+            display_name: Make Apprentice Life Science Tools
+            building: tool_workshop
+            level:
+                machining: 35
+            input:
+                lifescience_tools_n: 1
+                metis: 2
+                water: 5
+                soil: 5
+                smelt_iron: 1
+                power: 60
+                stamina: 5
+            output:
+                lootlist:
+                    - lifescience_tools_a: [1, 1, 1]
         #3d print shop
         craft_machine_shop3_c_C1:
             display_name: Craft Common Machine Shop (Gen 3)
